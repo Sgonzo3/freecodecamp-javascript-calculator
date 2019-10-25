@@ -6,9 +6,9 @@
   height: 40vmin;
 }
 
-.App-header {
+header {
+  height: 10vh;
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,4 +19,52 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+main {
+  height: 80vh;
+  max-width: 600px;
+  margin: auto;
+}
+
+.display {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.display {
+
+}
+
+.input {
+  font-size: 1.5rem;
+  align-self: flex-end;
+}
+
+.output {
+  font-size: 2rem;
+  align-self: flex-end;
+}
+
+.panel {
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr)
+}
+
+button {
+  font-size: 2rem;
+}
+footer {
+  height: 10vh;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
