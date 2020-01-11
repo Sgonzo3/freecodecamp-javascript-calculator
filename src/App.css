@@ -27,7 +27,7 @@ main {
   margin: auto;
 }
 
-.display {
+.display-field {
   height: 20vh;
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@ main {
   align-items: stretch;
 }
 
-.display {
+#display {
 
 }
 
