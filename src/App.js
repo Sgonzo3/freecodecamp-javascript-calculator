@@ -29,7 +29,6 @@ class Calculator extends React.Component {
         "/": (first, second) => +first / +second,
         "*": (first, second) => +first * +second,
         "-": (first, second) => +first - +second,
-        "=": (first, second) => console.log("="),
         "+": (first, second) => +first + +second,
       },
       buttons: ["7", "8", "9", "/", "4", "5", "6", "*", "1", "2", "3", "-", ".", "0", "=", "+"],
@@ -57,19 +56,18 @@ class Calculator extends React.Component {
   }
 
   evaluate = () => {
-    let answer = '0';
+    let answer = '';
     if(this.state.first && this.state.operator){
       if(!this.state.hash[this.state.output]){
         answer = (this.state.operator(this.state.first, this.state.output));
-
       }
     }
     return this.setState({
+      output: '' + answer,
       first: '' + answer,
       operator: '',
       operatorsList: ["*", "/", "+"],
-      output: '' + answer,
-    });
+    }, () => console.log(this.state));
   }
 
   checkDecimal(value){
@@ -88,27 +86,26 @@ class Calculator extends React.Component {
     this.setState({
          output: '',
          first: '',
-         second: '',
          operator: '',
          operatorsList: ["*", "/", "+"]
-    });
+    }, () => console.log(this.state));
   }
 
   checkOperator(value){
     if (this.state.operator){
       if(this.state.output !== '-') this.evaluate();
       return this.setState({
-        operator: this.state.hash[value],
         output: '',
+        operator: this.state.hash[value],
         operatorsList: ["*", "/", "+"]
-      });
+      }, () => console.log(this.state));
     } else {
       return this.setState({
-           first: this.state.output,
-           output: '',
-           operator: this.state.hash[value],
-           operatorsList: ["*", "/", "+"]
-         });
+        output: '',
+        first: this.state.output,
+        operator: this.state.hash[value],
+        operatorsList: ["*", "/", "+"]
+      }, () => console.log(this.state));
     }
   }
 
@@ -129,7 +126,7 @@ class Calculator extends React.Component {
         this.setState({
              operatorsList: ["*", "/", "+", "-"],
              output: this.state.output + value,
-           });
+           }, () => console.log(this.state));
     }
   }
 
