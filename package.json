@@ -8,7 +8,7 @@
     "react-dom": "^16.11.0",
     "react-scripts": "^3.3.1"
   },
-  "homepage": "https://sgonzo3.github.io/freecodecamp-javascript-calculator/",
+  "homepage": "https://sgonzo3.github.io/freecodecamp-javascript-calculator",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
