@@ -66,7 +66,7 @@ class Calculator extends React.Component {
       output: '' + answer,
       first: '' + answer,
       operator: '',
-      operatorsList: ["*", "/", "+"],
+      operatorsList: ["*", "/", "+", "-"],
     }, () => console.log(this.state));
   }
 
