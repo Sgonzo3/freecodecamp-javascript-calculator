@@ -1,4 +1,5 @@
 # JavaScript Calaculator
+- A single page calculator application written in Javascript using React
 - Completed as part of the freeeCodeCamp Front End Libraries Certification
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
